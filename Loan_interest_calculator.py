@@ -21,7 +21,7 @@ def remaining_balance(principal_amount,annual_interest_rate,duration,payments):
     remaining = principal_amount*(((m**n)-(m**payments))/((m**n)-1))
     return remaining
 
-monthly = monthly_loan(principal,interest_rate,duration)
+monthly = monthly_loan(principal_amount,interest_rate,duration)
 
 print("Loan amount: ",principal_amount," Interest rate: ",interest_rate)
 
@@ -29,5 +29,6 @@ print("Duration (Years): ",duration," Monthly payment: ",int(monthly))
 
 for x in range(1,duration+1):
     mon = x*12
-    rem = remaining_balance(principal,interest_rate,duration,mon)
-    print("Year: ",x," Balance remaining: ",int(rem)," Total payments: ",int(monthly*mon))
+    rem = remaining_balance(principal_amount,interest_rate,duration,mon)
+
+print("Year: ",x," Balance remaining: ",int(rem)," Total payments: ",int(monthly*mon))
